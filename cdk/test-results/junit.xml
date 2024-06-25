@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="10" failures="0" errors="0" time="3.882">
+  <testsuite name="test/node-version.test.ts" errors="0" failures="0" skipped="0" timestamp="2024-01-02T23:42:46" time="2.893" tests="1">
+    <testcase classname="Check your minimal LTS version of NodeJS -Should test version assert" name="Check your minimal LTS version of NodeJS -Should test version assert" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="test/markup.cdk.test.ts" errors="0" failures="0" skipped="0" timestamp="2024-01-02T23:42:46" time="2.911" tests="3">
+    <testcase classname="-no markup row if there is no message in the list" name="-no markup row if there is no message in the list" time="0.002">
+    </testcase>
+    <testcase classname="-standard message produces a default markup row" name="-standard message produces a default markup row" time="0">
+    </testcase>
+    <testcase classname="-notification markup row works with a colored message" name="-notification markup row works with a colored message" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="test/synthesize-stack.test.ts" errors="0" failures="0" skipped="0" timestamp="2024-01-02T23:42:46" time="3.11" tests="4">
+    <testcase classname="Synthesize tests-Creates the stack without exceptions" name="Synthesize tests-Creates the stack without exceptions" time="0.016">
+    </testcase>
+    <testcase classname="Synthesize tests-This app can synthesize completely" name="Synthesize tests-This app can synthesize completely" time="0.043">
+    </testcase>
+    <testcase classname="Synthesize tests › Synthesize tests-Creates the stack without exceptions" name="Synthesize tests › Synthesize tests-Creates the stack without exceptions" time="0.002">
+    </testcase>
+    <testcase classname="Synthesize tests › Synthesize tests-This app can synthesize completely" name="Synthesize tests › Synthesize tests-This app can synthesize completely" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="test/snapshot-cdklib.test.ts" errors="0" failures="0" skipped="0" timestamp="2024-01-02T23:42:46" time="3.106" tests="1">
+    <testcase classname="-Matches SnapShot" name="-Matches SnapShot" time="0.098">
+    </testcase>
+  </testsuite>
+  <testsuite name="test/snapshot-cdk.test.ts" errors="0" failures="0" skipped="0" timestamp="2024-01-02T23:42:46" time="3.185" tests="1">
+    <testcase classname="-Matches SnapShot" name="-Matches SnapShot" time="0.103">
+    </testcase>
+  </testsuite>
+</testsuites>

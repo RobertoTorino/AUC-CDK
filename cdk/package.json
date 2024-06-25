@@ -1,0 +1,89 @@
+{
+  "name": "auc-cdk",
+  "author": "Roberto Torino",
+  "homepage": "",
+  "version": "0.1.0",
+  "private": true,
+  "engineStrict": true,
+  "license": "MIT",
+  "description": "auto-upgrade core cdk packages",
+  "bin": {
+    "index": "index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build clean": "tsc --build --clean",
+    "watch": "tsc -w",
+    "test": "jest --no-cache --detectOpenHandles",
+    "jest": "jest",
+    "cdk": "cdk",
+    "lint": "eslint . --ext .js --ext .ts",
+    "lint:fix": "npm run lint -- --fix",
+    "purge cdk.out": "rm -rvf cdk.out",
+    "purge modules": "rm -rvf node_modules",
+    "purge lockfile": "rm package-lock.json",
+    "purge cache": "npm cache clean -f",
+    "cdk list": "npm run build && cdk list --app='node bin/index.js' --long",
+    "render extended diagram": "npx cdk ls -q && npx cdk-dia --collapse=false && mv -v diagram.png ./images/extended_diagram.png",
+    "render basic diagram": "npx cdk ls -q && npx cdk-dia --collapse=true && mv -v diagram.png ./images/basic_diagram.png"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/jquery": "3.5.29",
+    "@types/node": "20.10.5",
+    "@types/prettier": "3.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "aws-cdk": "2.126.0",
+    "esbuild": "0.19.10",
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-node": "^0.3.7",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "jest": "^29.7.0",
+    "jest-junit": "16.0.0",
+    "jshint": "2.13.6",
+    "lint-staged": "^15.2.0",
+    "package-json": "8.1.1",
+    "snyk": "1.1266.0",
+    "snyk-to-html": "2.4.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3"
+  },
+  "dependencies": {
+    "@aws-cdk/cloudformation-diff": "2.117.0",
+    "aws-cdk-lib": "2.117.0",
+    "cdk-dia": "0.10.0",
+    "chalk": "4.1.2",
+    "constructs": "^10.0.0",
+    "global": "4.4.0",
+    "jshint": "2.13.6",
+    "source-map-support": "^0.5.21",
+    "typedoc": "0.25.4",
+    "uuid": "9.0.1"
+  },
+  "peerDependencies": {
+    "aws-cdk": "^2.78.0"
+  },
+  "engines": {
+    "npm": ">=9.0.0",
+    "node": ">=18.0.0"
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": "./test-results",
+    "outputName": "junit.xml",
+    "uniqueOutputName": "false",
+    "classNameTemplate": "{classname}-{title}",
+    "titleTemplate": "{classname}-{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "npm run lint:fix"
+    ]
+  }
+}
